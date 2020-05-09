@@ -44,8 +44,8 @@ import com.atguigu.bean.Car;
  * 2）、通过让Bean实现InitializingBean-afterPropertiesSet（定义初始化逻辑），
  * 				DisposableBean-destroy（定义销毁逻辑）;
  * 3）、可以使用JSR250；
- * 		@PostConstruct：在bean创建完成并且属性赋值完成；来执行初始化方法
- * 		@PreDestroy：在容器销毁bean之前通知我们进行清理工作
+ * 		@PostConstruct：在bean创建完成并且属性赋值完成；来执行初始化方法(doemo->dog)
+ * 		@PreDestroy：在容器销毁bean之前通知我们进行清理工作(doemo->dog)
  * 4）、BeanPostProcessor【interface】：bean的后置处理器；
  * 		在bean初始化前后进行一些处理工作；
  * 		postProcessBeforeInitialization:在初始化之前工作
