@@ -4,6 +4,7 @@ import com.atguigu.bean.Color;
 import com.atguigu.bean.Person;
 import com.atguigu.bean.Red;
 import com.atguigu.condition.LinuxCondition;
+import com.atguigu.condition.MyImportBeanDefinitionRegistrar;
 import com.atguigu.condition.MyImportSelector;
 import com.atguigu.condition.WindowsCondition;
 import org.springframework.context.annotation.*;
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.*;
 //类中组件统一设置。满足当前条件，这个类中配置的所有bean注册才能生效；
 @Conditional({LinuxCondition.class})
 @Configuration
-@Import({Color.class, Red.class, MyImportSelector.class})
+@Import({Color.class, Red.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class})
 //@Import导入组件，id默认是组件的全类名
 public class MainConfig2 {
 
